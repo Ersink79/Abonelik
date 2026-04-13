@@ -3,26 +3,49 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Abonelik</title>
+<title>Beyaz Eşya Abonelik</title>
 
 <style>
 body {
   margin: 0;
-  font-family: Arial;
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
 }
 
+/* HERO */
 .hero {
-  background: #0a3d62;
+  background: linear-gradient(135deg, #0a3d62, #3c6382);
   color: white;
   text-align: center;
-  padding: 50px 20px;
+  padding: 60px 20px;
 }
 
+.hero h1 {
+  font-size: 24px;
+}
+
+.hero p {
+  opacity: 0.9;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 18px;
+  background: #ff7a18;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* SECTION */
 .section {
-  padding: 30px;
+  padding: 40px 20px;
   text-align: center;
 }
 
+/* CARDS */
 .cards {
   display: flex;
   flex-direction: column;
@@ -30,20 +53,39 @@ body {
 }
 
 .card {
-  background: #f5f5f5;
+  background: white;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: orange;
+.card.popular {
+  border: 2px solid #ff7a18;
+  transform: scale(1.03);
+}
+
+/* INFO */
+.info {
+  background: white;
+  padding: 30px 20px;
+  margin-top: 20px;
+}
+
+/* WHATSAPP BUTTON */
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
   color: white;
+  padding: 14px 16px;
+  border-radius: 50px;
   text-decoration: none;
-  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+/* RESPONSIVE */
 @media(min-width:768px) {
   .cards {
     flex-direction: row;
@@ -55,33 +97,49 @@ body {
 <body>
 
 <div class="hero">
-  <h1>Beyaz Eşya Abonelik</h1>
-  <p>Bakım + Garanti tek pakette</p>
+  <h1>Beyaz Eşyalarınız Bozulmadan Önce Koruyun</h1>
+  <p>Bakım + Garanti + Hızlı servis tek abonelikte</p>
 </div>
 
 <div class="section">
   <h2>Paketler</h2>
 
   <div class="cards">
+
     <div class="card">
       <h3>Başlangıç</h3>
       <p>149 TL / ay</p>
+      <p>1 bakım + indirimler</p>
       <a href="#" class="btn">Seç</a>
     </div>
 
-    <div class="card">
-      <h3>Avantaj</h3>
+    <div class="card popular">
+      <h3>Avantaj ⭐</h3>
       <p>349 TL / ay</p>
-      <a href="#" class="btn">Seç</a>
+      <p>2 bakım + garanti + öncelik</p>
+      <a href="#" class="btn">En Popüler</a>
     </div>
 
     <div class="card">
       <h3>Premium</h3>
       <p>599 TL / ay</p>
-      <a href="#" class="btn">Seç</a>
+      <p>VIP servis + 2 cihaz garanti</p>
+      <a href="#" class="btn">Satın Al</a>
     </div>
+
   </div>
 </div>
+
+<div class="info">
+  <h3>Neden Biz?</h3>
+  <p>✔ Aynı gün servis</p>
+  <p>✔ Sürpriz maliyet yok</p>
+  <p>✔ Uzman teknik ekip</p>
+</div>
+
+<a class="whatsapp" href="https://wa.me/905XXXXXXXXX">
+💬 Destek
+</a>
 
 </body>
 </html>
