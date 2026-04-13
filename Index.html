@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abonelik</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+.hero {
+  background: #0a3d62;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.section {
+  padding: 30px;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.card {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: orange;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+@media(min-width:768px) {
+  .cards {
+    flex-direction: row;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="hero">
+  <h1>Beyaz Eşya Abonelik</h1>
+  <p>Bakım + Garanti tek pakette</p>
+</div>
+
+<div class="section">
+  <h2>Paketler</h2>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Başlangıç</h3>
+      <p>149 TL / ay</p>
+      <a href="#" class="btn">Seç</a>
+    </div>
+
+    <div class="card">
+      <h3>Avantaj</h3>
+      <p>349 TL / ay</p>
+      <a href="#" class="btn">Seç</a>
+    </div>
+
+    <div class="card">
+      <h3>Premium</h3>
+      <p>599 TL / ay</p>
+      <a href="#" class="btn">Seç</a>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
