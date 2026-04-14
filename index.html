@@ -10,46 +10,21 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: #f5f7fa;
-  color: #333;
 }
 
 /* HERO */
 .hero {
-  position: relative;
-  height: 420px;
-}
-
-.hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(55%);
-}
-
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #0a3d62, #3c6382);
   color: white;
   text-align: center;
-  width: 90%;
-}
-
-.hero h1 {
-  font-size: 30px;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 16px;
+  padding: 60px 20px;
 }
 
 /* BUTTON */
 .btn {
   display: inline-block;
   margin-top: 15px;
-  padding: 14px 22px;
+  padding: 12px 20px;
   background: #ff7a18;
   color: white;
   border-radius: 8px;
@@ -79,16 +54,10 @@ body {
   border-radius: 16px;
   width: 300px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
 }
 
 .card.popular {
   border: 3px solid #ff7a18;
-  transform: scale(1.08);
   position: relative;
 }
 
@@ -105,7 +74,7 @@ body {
 }
 
 .price {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: bold;
   color: #0a3d62;
 }
@@ -119,32 +88,16 @@ body {
 .save {
   color: green;
   font-size: 14px;
-  margin-bottom: 10px;
 }
 
 ul {
   text-align: left;
-  padding: 0;
   list-style: none;
+  padding: 0;
 }
 
 ul li {
   padding: 6px 0;
-}
-
-/* TRUST */
-.trust {
-  background: white;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-/* CTA */
-.cta {
-  background: #0a3d62;
-  color: white;
-  padding: 50px 20px;
-  text-align: center;
 }
 
 /* WHATSAPP */
@@ -157,14 +110,13 @@ ul li {
   padding: 14px 18px;
   border-radius: 50px;
   text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
 /* RESPONSIVE */
-@media(min-width:768px) {
-  .hero h1 {
-    font-size: 36px;
+@media(max-width:768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
   }
 }
 </style>
@@ -172,88 +124,78 @@ ul li {
 
 <body>
 
-<!-- HERO -->
 <div class="hero">
-  <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
-  <div class="hero-content">
-    <h1>Beyaz Eşyalarınızı Bozulmadan Önce Koruyun</h1>
-    <p>Bakım + Onarım + Garanti tek abonelikte</p>
-    <a href="#paketler" class="btn">Paketleri Gör</a>
-  </div>
+  <h1>Beyaz Eşyalarınızı Koruma Altına Alın</h1>
+  <p>Bakım + Garanti + Avantajlar tek pakette</p>
 </div>
 
-<!-- PROBLEM -->
 <div class="section">
-  <h2>Beklenmedik Arıza Masraflarına Son</h2>
-  <p>Garanti bittikten sonra çıkan yüksek servis maliyetlerinden kurtulun.</p>
-</div>
-
-<!-- PAKETLER -->
-<div class="section" id="paketler">
   <h2>Paketinizi Seçin</h2>
 
   <div class="cards">
 
+    <!-- BAŞLANGIÇ -->
     <div class="card">
       <h3>Başlangıç</h3>
       <div class="old-price">Tek bakım: 2000 TL</div>
       <div class="price">149 TL / ay</div>
-      <div class="save">Yılda avantajlı fiyat</div>
+      <div class="save">Temel koruma paketi</div>
+
       <ul>
-        <li>✔ Yılda 1 bakım</li>
-        <li>✔ Öncelikli destek</li>
-        <li>✔ %10 servis indirimi</li>
+        <li>✔ Yılda 1 Ücretsiz Bakım</li>
+        <li>✔ Çağrı Merkezi Hızlı Erişim</li>
+        <li>✔ %10 Servis İndirimi</li>
+        <li>✔ KEA Alımlarında %20 İndirim</li>
       </ul>
+
       <a href="#" class="btn">Başla</a>
     </div>
 
+    <!-- AVANTAJ -->
     <div class="card popular">
       <div class="badge">EN POPÜLER</div>
       <h3>Avantaj</h3>
       <div class="old-price">Bakım + garanti: 6000 TL</div>
       <div class="price">349 TL / ay</div>
       <div class="save">En çok tercih edilen</div>
+
       <ul>
-        <li>✔ Yılda 2 bakım</li>
-        <li>✔ 1 cihaz garanti</li>
-        <li>✔ Aynı gün servis</li>
-        <li>✔ 1 ücretsiz onarım</li>
+        <li>✔ Yılda 2 Ücretsiz Bakım</li>
+        <li>✔ 1 Ürüne Uzatılmış Garanti</li>
+        <li>✔ Aynı Gün Servis</li>
+        <li>✔ %20 Servis İndirimi</li>
+        <li>✔ KEA Alımlarında %20 İndirim</li>
+        <li>✔ Beyaz Eşya Alımlarında %10 İndirim</li>
+        <li>✔ Temizlik & Bakım Ürünlerinde %20 İndirim</li>
       </ul>
+
       <a href="#" class="btn">Hemen Başla</a>
     </div>
 
+    <!-- PREMIUM -->
     <div class="card">
       <h3>Premium</h3>
       <div class="old-price">Tüm hizmetler: 9000 TL+</div>
       <div class="price">599 TL / ay</div>
-      <div class="save">Tam koruma</div>
+      <div class="save">Tam koruma paketi</div>
+
       <ul>
-        <li>✔ 2 cihaz garanti</li>
-        <li>✔ VIP servis</li>
-        <li>✔ 2 ücretsiz servis</li>
+        <li>✔ Yılda 2 Ücretsiz Bakım</li>
+        <li>✔ 2 Ürüne Uzatılmış Garanti</li>
+        <li>✔ VIP Hızlı Servis</li>
+        <li>✔ %30 Servis İndirimi</li>
+        <li>✔ KEA Alımlarında %20 İndirim</li>
+        <li>✔ Beyaz Eşya Alımlarında %10 İndirim</li>
+        <li>✔ Temizlik & Bakım Ürünlerinde %20 İndirim</li>
+        <li>✔ 1 Yıl Exxen Üyeliği</li>
       </ul>
+
       <a href="#" class="btn">Premium Al</a>
     </div>
 
   </div>
 </div>
 
-<!-- TRUST -->
-<div class="trust">
-  <h2>Neden Biz?</h2>
-  <p>✔ Aynı gün servis</p>
-  <p>✔ Sürpriz maliyet yok</p>
-  <p>✔ Uzman teknik ekip</p>
-</div>
-
-<!-- CTA -->
-<div class="cta">
-  <h2>Arıza Stresi Yaşamayın</h2>
-  <p>Hemen abone olun, biz sizin yerinize düşünelim</p>
-  <a href="#" class="btn">Hemen Abone Ol</a>
-</div>
-
-<!-- WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/905XXXXXXXXX">
 💬 Destek
 </a>
