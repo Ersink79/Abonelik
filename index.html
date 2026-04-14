@@ -1,225 +1,72 @@
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Beyaz Eşya Koruma Paketi</title>
-
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f7fa;
-  color: #333;
-}
-
-/* HERO */
-.hero {
-  position: relative;
-  height: 400px;
-}
-
-.hero img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: brightness(55%);
-}
-
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  width: 90%;
-}
-
-.hero h1 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 16px;
-  opacity: 0.9;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 14px 22px;
-  background: #ff7a18;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* SECTION */
 .section {
-  padding: 50px 20px;
+  padding: 60px 20px;
   text-align: center;
 }
 
-/* CARDS */
 .cards {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
 }
 
 .card {
   background: white;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  padding: 30px;
+  border-radius: 16px;
+  width: 300px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .card.popular {
   border: 3px solid #ff7a18;
-  transform: scale(1.05);
+  transform: scale(1.08);
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ff7a18;
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
 }
 
 .price {
-  font-size: 26px;
-  margin: 10px 0;
+  font-size: 30px;
+  font-weight: bold;
   color: #0a3d62;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: gray;
+  font-size: 14px;
+}
+
+.save {
+  color: green;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
 
 ul {
   text-align: left;
-  padding: 0;
-  list-style: none;
+  margin-top: 15px;
 }
 
 ul li {
   padding: 6px 0;
 }
-
-/* TRUST */
-.trust {
-  background: white;
-  padding: 40px 20px;
-}
-
-.trust-item {
-  margin: 15px 0;
-  font-weight: bold;
-}
-
-/* CTA */
-.cta {
-  background: #0a3d62;
-  color: white;
-  padding: 50px 20px;
-  text-align: center;
-}
-
-/* WHATSAPP */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #25D366;
-  color: white;
-  padding: 14px 18px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-/* RESPONSIVE */
-@media(min-width:768px) {
-  .cards {
-    flex-direction: row;
-  }
-}
-</style>
-</head>
-
-<body>
-
-<!-- HERO -->
-<div class="hero">
-  <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
-  <div class="hero-content">
-    <h1>Beyaz Eşyalarınız Bozulmadan Önce Koruyun</h1>
-    <p>Bakım + Onarım + Garanti tek abonelikte</p>
-    <a href="#paketler" class="btn">Hemen Başla</a>
-  </div>
-</div>
-
-<!-- PROBLEM -->
-<div class="section">
-  <h2>Neden Bu Hizmete İhtiyacınız Var?</h2>
-  <p>Garanti bitince çıkan yüksek maliyetler, geç gelen servisler ve beklenmedik arızalar sizi yormasın.</p>
-</div>
-
-<!-- PAKETLER -->
-<div class="section" id="paketler">
-  <h2>Paketler</h2>
-
-  <div class="cards">
-
-    <div class="card">
-      <h3>Başlangıç</h3>
-      <div class="price">149 TL / ay</div>
-      <ul>
-        <li>✔ Yılda 1 bakım</li>
-        <li>✔ Servis önceliği</li>
-        <li>✔ %10 indirim</li>
-      </ul>
-      <a href="#" class="btn">Seç</a>
-    </div>
-
-    <div class="card popular">
-      <h3>Avantaj ⭐</h3>
-      <div class="price">349 TL / ay</div>
-      <ul>
-        <li>✔ Yılda 2 bakım</li>
-        <li>✔ 1 cihaz garanti</li>
-        <li>✔ Aynı gün servis</li>
-        <li>✔ 1 ücretsiz onarım</li>
-      </ul>
-      <a href="#" class="btn">En Popüler</a>
-    </div>
-
-    <div class="card">
-      <h3>Premium</h3>
-      <div class="price">599 TL / ay</div>
-      <ul>
-        <li>✔ 2 cihaz garanti</li>
-        <li>✔ VIP servis</li>
-        <li>✔ 2 ücretsiz servis</li>
-        <li>✔ Öncelikli destek</li>
-      </ul>
-      <a href="#" class="btn">Satın Al</a>
-    </div>
-
-  </div>
-</div>
-
-<!-- TRUST -->
-<div class="trust">
-  <h2>Neden Biz?</h2>
-  <div class="trust-item">✔ Aynı gün servis</div>
-  <div class="trust-item">✔ Sürpriz maliyet yok</div>
-  <div class="trust-item">✔ Uzman teknik ekip</div>
-</div>
-
-<!-- CTA -->
-<div class="cta">
-  <h2>Artık Arıza Stresi Yaşamayın</h2>
-  <p>Hemen abone olun, tüm süreci biz yönetelim</p>
-  <a href="#" class="btn">Hemen Abone Ol</a>
-</div>
-
-<!-- WHATSAPP -->
-<a class="whatsapp" href="https://wa.me/905XXXXXXXXX">
-💬 Destek
-</a>
-
-</body>
-</html>
