@@ -23,7 +23,7 @@ body {
 
 /* HEADER */
 .header {
-  padding: 12px 20px;
+  padding: 10px 20px;
   background: white;
   border-bottom: 1px solid #eee;
 }
@@ -35,14 +35,14 @@ body {
 
 /* HERO */
 .hero {
-  padding: 30px 15px;
+  padding: 25px 15px;
   text-align: center;
   background: white;
 }
 
 .hero h1 {
   font-size: 22px;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 .hero p {
@@ -53,43 +53,44 @@ body {
 }
 
 .hero .benefits {
-  margin-top: 10px;
+  margin-top: 8px;
   font-size: 13px;
   font-weight: 600;
+  line-height: 1.4;
 }
 
 /* BUTTON */
 .btn {
   display: inline-block;
-  margin-top: 12px;
-  padding: 10px 16px;
+  margin-top: 10px;
+  padding: 9px 14px;
   background: var(--primary);
   color: white;
   border-radius: 8px;
   text-decoration: none;
-  font-weight: 600;
   font-size: 13px;
+  font-weight: 600;
 }
 
 /* SECTION */
 .section {
-  padding: 30px 15px;
+  padding: 25px 15px;
   text-align: center;
 }
 
 /* GRID */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   gap: 15px;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: auto;
 }
 
 /* CARD */
 .card {
   background: white;
-  padding: 18px;
+  padding: 16px;
   border-radius: 16px;
   border: 1px solid #eee;
   display: flex;
@@ -101,7 +102,7 @@ body {
 }
 
 .card:hover {
-  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
 /* TEXT */
@@ -126,19 +127,18 @@ body {
   color: var(--primary);
 }
 
-/* 🔥 LIST GRID (EN KRİTİK) */
+/* LIST (EN KRİTİK DÜZELTME) */
 ul {
   list-style: none;
   padding: 0;
-  margin: 10px 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6px 12px;
+  margin: 8px 0;
   text-align: left;
 }
 
 ul li {
   font-size: 13px;
+  padding: 3px 0;
+  line-height: 1.3;
 }
 
 /* BUTTON ALIGN */
@@ -148,7 +148,7 @@ ul li {
 
 /* CTA */
 .cta {
-  padding: 30px 15px;
+  padding: 25px 15px;
   text-align: center;
   background: white;
 }
@@ -156,8 +156,8 @@ ul li {
 /* WHATSAPP */
 .whatsapp {
   position: fixed;
-  bottom: 15px;
-  right: 15px;
+  bottom: 12px;
+  right: 12px;
   background: var(--primary);
   color: white;
   padding: 10px 12px;
@@ -166,13 +166,9 @@ ul li {
   text-decoration: none;
 }
 
-/* MOBILE FIX */
+/* MOBILE */
 @media (max-width:600px) {
   .cards {
-    grid-template-columns: 1fr;
-  }
-
-  ul {
     grid-template-columns: 1fr;
   }
 }
@@ -213,10 +209,10 @@ ul li {
         <li>✔ Yılda 1 Ücretsiz Bakım</li>
         <li>✔ Çağrı Merkezi Hızlı Erişim</li>
         <li>✔ %10 Servis İndirimi</li>
-        <li>✔ KEA %20 İndirim</li>
+        <li>✔ KEA Alımlarında %20 İndirim</li>
       </ul>
 
-      <a href="#" class="btn">Başla</a>
+      <a href="#" class="btn">Hemen Başla</a>
     </div>
 
     <!-- AVANTAJ -->
@@ -228,14 +224,15 @@ ul li {
       <ul>
         <li>✔ Yılda 2 Ücretsiz Bakım</li>
         <li>✔ 1 Ürüne Uzatılmış Garanti</li>
-        <li>✔ 1 Yıl Exxen</li>
+        <li>✔ 1 Yıl Exxen Üyeliği</li>
         <li>✔ Aynı Gün Servis</li>
         <li>✔ %20 Servis İndirimi</li>
-        <li>✔ BE %10 İndirim</li>
-        <li>✔ Temizlik %20</li>
+        <li>✔ KEA Alımlarında %20 İndirim</li>
+        <li>✔ Beyaz Eşya Alımlarında %10 İndirim</li>
+        <li>✔ Temizlik & Bakım Ürünlerinde %20 İndirim</li>
       </ul>
 
-      <a href="#" class="btn">Seç</a>
+      <a href="#" class="btn">En İyi Teklif</a>
     </div>
 
     <!-- PREMIUM -->
@@ -245,15 +242,18 @@ ul li {
       <div class="price">599 TL / ay</div>
 
       <ul>
-        <li>✔ 2 Ürün Garanti</li>
-        <li>✔ VIP Servis</li>
-        <li>✔ Exxen</li>
-        <li>✔ %30 Servis</li>
-        <li>✔ BE %10</li>
-        <li>✔ KEA %20</li>
+        <li>✔ Tüm Avantaj Paketi + Ekstra Ayrıcalıklar</li>
+        <li>✔ Yılda 2 Ücretsiz Bakım</li>
+        <li>✔ 2 Ürüne Uzatılmış Garanti</li>
+        <li>✔ 1 Yıl Exxen Üyeliği</li>
+        <li>✔ VIP Hızlı Servis</li>
+        <li>✔ %30 Servis İndirimi</li>
+        <li>✔ KEA Alımlarında %20 İndirim</li>
+        <li>✔ Beyaz Eşya Alımlarında %10 İndirim</li>
+        <li>✔ Temizlik & Bakım Ürünlerinde %20 İndirim</li>
       </ul>
 
-      <a href="#" class="btn">Al</a>
+      <a href="#" class="btn">Tam Koruma Al</a>
     </div>
 
   </div>
