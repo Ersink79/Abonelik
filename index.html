@@ -16,7 +16,6 @@
   --light: #f7f7f7;
 }
 
-/* RESET */
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
@@ -49,24 +48,30 @@ body {
 }
 
 .hero p {
-  max-width: 600px;
+  max-width: 650px;
   margin: auto;
   font-size: clamp(14px, 2vw, 16px);
-  line-height: 1.5;
+  line-height: 1.6;
   color: var(--gray);
+}
+
+.hero .benefits {
+  margin-top: 15px;
+  font-weight: 600;
+  color: var(--dark);
+  line-height: 1.6;
 }
 
 /* BUTTON */
 .btn {
   display: inline-block;
-  margin-top: 15px;
-  padding: 10px 18px;
+  margin-top: 18px;
+  padding: 11px 20px;
   background: var(--primary);
   color: white;
   border-radius: 10px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 14px;
   transition: 0.3s;
 }
 
@@ -101,7 +106,6 @@ body {
   transition: 0.3s;
 }
 
-/* HOVER EFFECT */
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 30px rgba(0,0,0,0.12);
@@ -111,7 +115,6 @@ body {
   border: 2px solid var(--primary);
 }
 
-/* BADGE */
 .badge {
   background: var(--primary);
   color: white;
@@ -122,15 +125,10 @@ body {
   display: inline-block;
 }
 
-/* TITLE */
+/* TEXT */
 .card h3 {
   margin: 10px 0;
   font-size: 18px;
-}
-
-/* PRICE */
-.price-block {
-  margin-bottom: 10px;
 }
 
 .price {
@@ -147,6 +145,7 @@ body {
 .save {
   color: var(--primary);
   font-size: 12px;
+  margin-bottom: 8px;
 }
 
 /* LIST */
@@ -168,6 +167,13 @@ ul li {
   margin-top: auto;
 }
 
+/* CTA */
+.cta {
+  text-align: center;
+  padding: 50px 20px;
+  background: white;
+}
+
 /* WHATSAPP */
 .whatsapp {
   position: fixed;
@@ -179,13 +185,6 @@ ul li {
   border-radius: 50px;
   font-size: 14px;
   text-decoration: none;
-}
-
-/* MOBILE */
-@media(max-width:480px){
-  .card {
-    min-height: auto;
-  }
 }
 </style>
 </head>
@@ -201,9 +200,16 @@ ul li {
 <div class="hero">
   <h1>Beyaz Eşyalarınız İçin Akıllı Koruma</h1>
   <p>
-    Beklenmedik arıza maliyetlerinden kurtulun. Düzenli bakım, uzatılmış garanti ve özel ayrıcalıklarla 
-    cihazlarınızı koruma altına alın. Tek abonelikle hem bütçenizi hem konforunuzu güvenceye alın.
+    Beklenmedik arıza maliyetlerinden kurtulun. Düzenli bakım ve uzatılmış garanti ile 
+    cihazlarınızı güvence altına alın.
   </p>
+
+  <div class="benefits">
+    ✔ Tek bakım ücretine tüm yıl koruma<br>
+    ✔ Arıza riskine karşı garanti güvencesi<br>
+    ✔ Aynı gün hızlı servis ayrıcalığı
+  </div>
+
   <a href="#paketler" class="btn">Paketleri İncele</a>
 </div>
 
@@ -217,11 +223,9 @@ ul li {
     <div class="card">
       <h3>Başlangıç</h3>
 
-      <div class="price-block">
-        <div class="old-price">2000 TL</div>
-        <div class="price">149 TL / ay</div>
-        <div class="save">Temel koruma paketi</div>
-      </div>
+      <div class="old-price">2000 TL</div>
+      <div class="price">149 TL / ay</div>
+      <div class="save">Temel koruma paketi</div>
 
       <ul>
         <li>✔ Yılda 1 Ücretsiz Bakım</li>
@@ -230,19 +234,22 @@ ul li {
         <li>✔ KEA Alımlarında %20 İndirim</li>
       </ul>
 
-      <a href="#" class="btn">Başla</a>
+      <a href="#" class="btn">Hemen Başla</a>
     </div>
 
     <!-- AVANTAJ -->
     <div class="card popular">
       <div class="badge">EN POPÜLER</div>
+
+      <div style="font-size:12px; color:#6b6b6b; margin-bottom:6px;">
+        ⭐ Kullanıcıların %68’i bu paketi seçiyor
+      </div>
+
       <h3>Avantaj</h3>
 
-      <div class="price-block">
-        <div class="old-price">6000 TL</div>
-        <div class="price">349 TL / ay</div>
-        <div class="save">En çok tercih edilen</div>
-      </div>
+      <div class="old-price">6000 TL</div>
+      <div class="price">349 TL / ay</div>
+      <div class="save">Aylık ~500 TL yerine sadece 349 TL</div>
 
       <ul>
         <li>✔ Yılda 2 Ücretsiz Bakım</li>
@@ -255,20 +262,19 @@ ul li {
         <li>✔ Temizlik & Bakım Ürünlerinde %20 İndirim</li>
       </ul>
 
-      <a href="#" class="btn">Hemen Başla</a>
+      <a href="#" class="btn">En İyi Teklif</a>
     </div>
 
     <!-- PREMIUM -->
     <div class="card">
       <h3>Premium</h3>
 
-      <div class="price-block">
-        <div class="old-price">9000 TL+</div>
-        <div class="price">599 TL / ay</div>
-        <div class="save">Tam koruma paketi</div>
-      </div>
+      <div class="old-price">9000 TL+</div>
+      <div class="price">599 TL / ay</div>
+      <div class="save">Aylık ~750 TL değer → 599 TL</div>
 
       <ul>
+        <li style="color:#E2001A; font-weight:600;">✔ Tüm Avantaj Paketi + Ekstra Ayrıcalıklar</li>
         <li>✔ Yılda 2 Ücretsiz Bakım</li>
         <li>✔ 2 Ürüne Uzatılmış Garanti</li>
         <li>✔ 1 Yıl Exxen Üyeliği</li>
@@ -279,14 +285,21 @@ ul li {
         <li>✔ Temizlik & Bakım Ürünlerinde %20 İndirim</li>
       </ul>
 
-      <a href="#" class="btn">Premium Al</a>
+      <a href="#" class="btn">Tam Koruma Al</a>
     </div>
 
   </div>
 </div>
 
+<!-- ALT CTA -->
+<div class="cta">
+  <h2>Arıza Olmadan Önlem Alın</h2>
+  <p>Bugün abone olun, yüksek servis maliyetlerinden kurtulun</p>
+  <a href="#" class="btn">Hemen Başla</a>
+</div>
+
 <!-- WHATSAPP -->
-<a class="whatsapp" href="#">
+<a class="whatsapp" href="https://wa.me/905XXXXXXXXX?text=Abonelik hakkında bilgi almak istiyorum">
 Destek
 </a>
 
