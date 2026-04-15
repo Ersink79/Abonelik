@@ -3,21 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Beyaz Eşya Koruma Aboneliği</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 <style>
+:root {
+  --primary: #E2001A;
+  --dark: #1C1C1C;
+  --gray: #6b6b6b;
+  --light: #f5f5f5;
+}
+
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f5f7fa;
+  font-family: 'Inter', sans-serif;
+  background: var(--light);
+  color: var(--dark);
 }
 
 /* HERO */
 .hero {
-  background: linear-gradient(135deg, #0a3d62, #3c6382);
-  color: white;
+  background: white;
   text-align: center;
   padding: 60px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.hero h1 {
+  font-size: 28px;
+}
+
+.hero p {
+  color: var(--gray);
 }
 
 /* BUTTON */
@@ -25,11 +44,11 @@ body {
   display: inline-block;
   margin-top: 15px;
   padding: 12px 20px;
-  background: #ff7a18;
+  background: var(--primary);
   color: white;
-  border-radius: 8px;
+  border-radius: 6px;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 /* SECTION */
@@ -38,8 +57,8 @@ body {
   text-align: center;
 }
 
-/* CARDS */
-  .cards {
+/* GRID */
+.cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
@@ -50,53 +69,74 @@ body {
 .card {
   background: white;
   padding: 30px;
-  border-radius: 16px;
-  width: 300px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  border: 1px solid #eee;
+  transition: 0.3s;
+}
+
+.card:hover {
+  border-color: var(--primary);
 }
 
 .card.popular {
-  border: 3px solid #ff7a18;
-  position: relative;
+  border: 2px solid var(--primary);
 }
 
 .badge {
-  position: absolute;
-  top: -12px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: #ff7a18;
+  background: var(--primary);
   color: white;
-  padding: 5px 12px;
-  border-radius: 20px;
   font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 10px;
 }
 
 .price {
-  font-size: 28px;
-  font-weight: bold;
-  color: #0a3d62;
+  font-size: 26px;
+  font-weight: 700;
 }
 
 .old-price {
   text-decoration: line-through;
-  color: gray;
-  font-size: 14px;
+  color: var(--gray);
+  font-size: 13px;
 }
 
 .save {
-  color: green;
-  font-size: 14px;
+  color: var(--primary);
+  font-size: 13px;
+  margin-bottom: 10px;
 }
 
 ul {
   text-align: left;
-  list-style: none;
   padding: 0;
+  list-style: none;
 }
 
 ul li {
   padding: 6px 0;
+}
+
+/* TRUST */
+.trust {
+  background: white;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 1px solid #eee;
+}
+
+/* CTA */
+.cta {
+  background: var(--dark);
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.cta .btn {
+  background: var(--primary);
 }
 
 /* WHATSAPP */
@@ -104,19 +144,11 @@ ul li {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background: #25D366;
+  background: var(--primary);
   color: white;
   padding: 14px 18px;
   border-radius: 50px;
   text-decoration: none;
-}
-
-/* RESPONSIVE */
-@media(max-width:768px) {
-  .cards {
-    flex-direction: column;
-    align-items: center;
-  }
 }
 </style>
 </head>
@@ -124,69 +156,58 @@ ul li {
 <body>
 
 <div class="hero">
-  <h1>Beyaz Eşyalarınızı Koruma Altına Alın</h1>
-  <p>Bakım + Garanti + Avantajlar tek pakette</p>
+  <h1>Beyaz Eşyalarınız İçin Akıllı Koruma</h1>
+  <p>Bakım, garanti ve ayrıcalıklar tek abonelikte</p>
+  <a href="#paketler" class="btn">Paketleri İncele</a>
 </div>
 
-<div class="section">
+<div class="section" id="paketler">
   <h2>Paketinizi Seçin</h2>
 
   <div class="cards">
 
-    <!-- BAŞLANGIÇ -->
     <div class="card">
       <h3>Başlangıç</h3>
-      <div class="old-price">Tek bakım: 2000 TL</div>
+      <div class="old-price">2000 TL</div>
       <div class="price">149 TL / ay</div>
-      <div class="save">Temel koruma paketi</div>
 
       <ul>
         <li>✔ Yılda 1 Ücretsiz Bakım</li>
         <li>✔ Çağrı Merkezi Hızlı Erişim</li>
         <li>✔ %10 Servis İndirimi</li>
-        <li>✔ KEA Alımlarında %20 İndirim</li>
+        <li>✔ KEA %20 indirim</li>
       </ul>
 
       <a href="#" class="btn">Başla</a>
     </div>
 
-    <!-- AVANTAJ -->
     <div class="card popular">
-      <div class="badge">EN POPÜLER</div>
+      <div class="badge">En Popüler</div>
       <h3>Avantaj</h3>
-      <div class="old-price">Bakım + garanti: 6000 TL</div>
+      <div class="old-price">6000 TL</div>
       <div class="price">349 TL / ay</div>
-      <div class="save">En çok tercih edilen</div>
 
       <ul>
         <li>✔ Yılda 2 Ücretsiz Bakım</li>
         <li>✔ 1 Ürüne Uzatılmış Garanti</li>
         <li>✔ Aynı Gün Servis</li>
         <li>✔ %20 Servis İndirimi</li>
-        <li>✔ KEA Alımlarında %20 İndirim</li>
-        <li>✔ Beyaz Eşya Alımlarında %10 İndirim</li>
-        <li>✔ Temizlik & Bakım Ürünlerinde %20 İndirim</li>
+        <li>✔ Tüm indirim avantajları</li>
       </ul>
 
       <a href="#" class="btn">Hemen Başla</a>
     </div>
 
-    <!-- PREMIUM -->
     <div class="card">
       <h3>Premium</h3>
-      <div class="old-price">Tüm hizmetler: 9000 TL+</div>
+      <div class="old-price">9000 TL+</div>
       <div class="price">599 TL / ay</div>
-      <div class="save">Tam koruma paketi</div>
 
       <ul>
-        <li>✔ Yılda 2 Ücretsiz Bakım</li>
         <li>✔ 2 Ürüne Uzatılmış Garanti</li>
-        <li>✔ VIP Hızlı Servis</li>
+        <li>✔ VIP Servis</li>
         <li>✔ %30 Servis İndirimi</li>
-        <li>✔ KEA Alımlarında %20 İndirim</li>
-        <li>✔ Beyaz Eşya Alımlarında %10 İndirim</li>
-        <li>✔ Temizlik & Bakım Ürünlerinde %20 İndirim</li>
-        <li>✔ 1 Yıl Exxen Üyeliği</li>
+        <li>✔ Tüm avantajlar + Exxen</li>
       </ul>
 
       <a href="#" class="btn">Premium Al</a>
@@ -195,8 +216,14 @@ ul li {
   </div>
 </div>
 
-<a class="whatsapp" href="https://wa.me/905XXXXXXXXX">
-💬 Destek
+<div class="cta">
+  <h2>Arızaları Düşünmeyin</h2>
+  <p>Abone olun, gerisini biz halledelim</p>
+  <a href="#" class="btn">Hemen Başla</a>
+</div>
+
+<a class="whatsapp" href="#">
+Destek
 </a>
 
 </body>
