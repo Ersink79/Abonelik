@@ -56,7 +56,6 @@ body {
   margin-top: 10px;
   font-size: 13px;
   font-weight: 600;
-  line-height: 1.5;
 }
 
 /* BUTTON */
@@ -81,9 +80,9 @@ body {
 /* GRID */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 15px;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
 }
 
@@ -127,17 +126,19 @@ body {
   color: var(--primary);
 }
 
-/* LIST */
+/* 🔥 LIST GRID (EN KRİTİK) */
 ul {
   list-style: none;
   padding: 0;
-  text-align: left;
   margin: 10px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px 12px;
+  text-align: left;
 }
 
 ul li {
   font-size: 13px;
-  padding: 3px 0;
 }
 
 /* BUTTON ALIGN */
@@ -165,10 +166,15 @@ ul li {
   text-decoration: none;
 }
 
-/* MOBILE */
+/* MOBILE FIX */
 @media (max-width:600px) {
-  .hero h1 { font-size: 20px; }
-  .cards { grid-template-columns: 1fr; }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  ul {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
 </head>
@@ -181,12 +187,12 @@ ul li {
 
 <div class="hero">
   <h1>Beyaz Eşyalarınız İçin Akıllı Koruma</h1>
-  <p>Beklenmedik arıza maliyetlerinden kurtulun ve cihazlarınızı güvence altına alın.</p>
+  <p>Beklenmedik arıza maliyetlerinden kurtulun.</p>
 
   <div class="benefits">
-    ✔ Tek bakım ücretine tüm yıl koruma<br>
+    ✔ Tüm yıl koruma<br>
     ✔ Garanti güvencesi<br>
-    ✔ Hızlı servis ayrıcalığı
+    ✔ Hızlı servis
   </div>
 
   <a href="#paketler" class="btn">Paketleri İncele</a>
@@ -197,50 +203,54 @@ ul li {
 
   <div class="cards">
 
+    <!-- BAŞLANGIÇ -->
     <div class="card">
       <h3>Başlangıç</h3>
       <div class="old-price">2000 TL</div>
       <div class="price">149 TL / ay</div>
-      <div class="save">Temel paket</div>
 
       <ul>
-        <li>✔ Yılda 1 bakım</li>
-        <li>✔ Hızlı çağrı merkezi</li>
-        <li>✔ %10 servis indirimi</li>
-        <li>✔ KEA %20 indirim</li>
+        <li>✔ Yılda 1 Ücretsiz Bakım</li>
+        <li>✔ Çağrı Merkezi Hızlı Erişim</li>
+        <li>✔ %10 Servis İndirimi</li>
+        <li>✔ KEA %20 İndirim</li>
       </ul>
 
       <a href="#" class="btn">Başla</a>
     </div>
 
+    <!-- AVANTAJ -->
     <div class="card popular">
       <h3>Avantaj</h3>
       <div class="old-price">6000 TL</div>
       <div class="price">349 TL / ay</div>
-      <div class="save">En çok tercih edilen</div>
 
       <ul>
-        <li>✔ Yılda 2 bakım</li>
-        <li>✔ Uzatılmış garanti</li>
-        <li>✔ Exxen üyeliği</li>
-        <li>✔ Aynı gün servis</li>
-        <li>✔ %20 servis indirimi</li>
+        <li>✔ Yılda 2 Ücretsiz Bakım</li>
+        <li>✔ 1 Ürüne Uzatılmış Garanti</li>
+        <li>✔ 1 Yıl Exxen</li>
+        <li>✔ Aynı Gün Servis</li>
+        <li>✔ %20 Servis İndirimi</li>
+        <li>✔ BE %10 İndirim</li>
+        <li>✔ Temizlik %20</li>
       </ul>
 
       <a href="#" class="btn">Seç</a>
     </div>
 
+    <!-- PREMIUM -->
     <div class="card">
       <h3>Premium</h3>
       <div class="old-price">9000 TL+</div>
       <div class="price">599 TL / ay</div>
-      <div class="save">Tam koruma</div>
 
       <ul>
-        <li>✔ 2 ürün garanti</li>
-        <li>✔ VIP servis</li>
-        <li>✔ Exxen üyeliği</li>
-        <li>✔ %30 servis indirimi</li>
+        <li>✔ 2 Ürün Garanti</li>
+        <li>✔ VIP Servis</li>
+        <li>✔ Exxen</li>
+        <li>✔ %30 Servis</li>
+        <li>✔ BE %10</li>
+        <li>✔ KEA %20</li>
       </ul>
 
       <a href="#" class="btn">Al</a>
