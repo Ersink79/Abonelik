@@ -20,25 +20,50 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   background: var(--light);
-  color: var(--dark);
+}
+
+/* HEADER */
+.header {
+  background: white;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--primary);
 }
 
 /* HERO */
 .hero {
-  background: white;
   text-align: center;
-  padding: 60px 20px;
-  border-bottom: 1px solid #eee;
+  padding: 60px 20px 40px;
+  background: white;
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  color: var(--gray);
+  max-width: 600px;
+  margin: auto;
+  line-height: 1.5;
 }
 
 /* BUTTON */
 .btn {
   display: inline-block;
-  margin-top: 15px;
-  padding: 12px 20px;
+  margin-top: 20px;
+  padding: 12px 22px;
   background: var(--primary);
   color: white;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
   font-weight: 600;
 }
@@ -52,17 +77,21 @@ body {
 /* GRID */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
   max-width: 1100px;
   margin: auto;
 }
 
+/* CARD */
 .card {
   background: white;
-  padding: 30px;
-  border-radius: 10px;
+  padding: 35px;
+  border-radius: 18px;
   border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .card.popular {
@@ -73,14 +102,24 @@ body {
   background: var(--primary);
   color: white;
   font-size: 12px;
-  padding: 4px 10px;
+  padding: 5px 12px;
   border-radius: 20px;
   display: inline-block;
   margin-bottom: 10px;
 }
 
+/* TITLE ALIGN FIX */
+.card h3 {
+  min-height: 50px;
+}
+
+/* PRICE ALIGN FIX */
+.price-block {
+  min-height: 80px;
+}
+
 .price {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 700;
 }
 
@@ -93,27 +132,26 @@ body {
 .save {
   color: var(--primary);
   font-size: 13px;
-  margin-bottom: 10px;
 }
 
+/* LIST */
 ul {
   text-align: left;
   padding: 0;
   list-style: none;
+  flex-grow: 1;
 }
 
 ul li {
   padding: 6px 0;
 }
 
-/* CTA */
-.cta {
-  background: var(--dark);
-  color: white;
-  padding: 50px 20px;
-  text-align: center;
+/* BUTTON ALIGN */
+.card .btn {
+  margin-top: auto;
 }
 
+/* WHATSAPP */
 .whatsapp {
   position: fixed;
   bottom: 20px;
@@ -129,12 +167,22 @@ ul li {
 
 <body>
 
+<!-- HEADER -->
+<div class="header">
+  <div class="logo">Arçelik</div>
+</div>
+
+<!-- HERO -->
 <div class="hero">
   <h1>Beyaz Eşyalarınız İçin Akıllı Koruma</h1>
-  <p>Bakım, garanti ve ayrıcalıklar tek abonelikte</p>
+  <p>
+    Beklenmedik arıza maliyetlerinden kurtulun. Düzenli bakım, uzatılmış garanti ve özel ayrıcalıklarla 
+    cihazlarınızı koruma altına alın. Tek abonelikle hem bütçenizi hem konforunuzu güvenceye alın.
+  </p>
   <a href="#paketler" class="btn">Paketleri İncele</a>
 </div>
 
+<!-- PACKAGES -->
 <div class="section" id="paketler">
   <h2>Paketinizi Seçin</h2>
 
@@ -143,9 +191,12 @@ ul li {
     <!-- BAŞLANGIÇ -->
     <div class="card">
       <h3>Başlangıç</h3>
-      <div class="old-price">Tek bakım: 2000 TL</div>
-      <div class="price">149 TL / ay</div>
-      <div class="save">Temel koruma paketi</div>
+
+      <div class="price-block">
+        <div class="old-price">2000 TL</div>
+        <div class="price">149 TL / ay</div>
+        <div class="save">Temel koruma paketi</div>
+      </div>
 
       <ul>
         <li>✔ Yılda 1 Ücretsiz Bakım</li>
@@ -161,13 +212,17 @@ ul li {
     <div class="card popular">
       <div class="badge">EN POPÜLER</div>
       <h3>Avantaj</h3>
-      <div class="old-price">Bakım + garanti: 6000 TL</div>
-      <div class="price">349 TL / ay</div>
-      <div class="save">En çok tercih edilen</div>
+
+      <div class="price-block">
+        <div class="old-price">6000 TL</div>
+        <div class="price">349 TL / ay</div>
+        <div class="save">En çok tercih edilen</div>
+      </div>
 
       <ul>
         <li>✔ Yılda 2 Ücretsiz Bakım</li>
         <li>✔ 1 Ürüne Uzatılmış Garanti</li>
+        <li>✔ 1 Yıl Exxen Üyeliği</li>
         <li>✔ Aynı Gün Servis</li>
         <li>✔ %20 Servis İndirimi</li>
         <li>✔ KEA Alımlarında %20 İndirim</li>
@@ -181,31 +236,28 @@ ul li {
     <!-- PREMIUM -->
     <div class="card">
       <h3>Premium</h3>
-      <div class="old-price">Tüm hizmetler: 9000 TL+</div>
-      <div class="price">599 TL / ay</div>
-      <div class="save">Tam koruma paketi</div>
+
+      <div class="price-block">
+        <div class="old-price">9000 TL+</div>
+        <div class="price">599 TL / ay</div>
+        <div class="save">Tam koruma paketi</div>
+      </div>
 
       <ul>
         <li>✔ Yılda 2 Ücretsiz Bakım</li>
         <li>✔ 2 Ürüne Uzatılmış Garanti</li>
+        <li>✔ 1 Yıl Exxen Üyeliği</li>
         <li>✔ VIP Hızlı Servis</li>
         <li>✔ %30 Servis İndirimi</li>
         <li>✔ KEA Alımlarında %20 İndirim</li>
         <li>✔ Beyaz Eşya Alımlarında %10 İndirim</li>
         <li>✔ Temizlik & Bakım Ürünlerinde %20 İndirim</li>
-        <li>✔ 1 Yıl Exxen Üyeliği</li>
       </ul>
 
       <a href="#" class="btn">Premium Al</a>
     </div>
 
   </div>
-</div>
-
-<div class="cta">
-  <h2>Arızaları Düşünmeyin</h2>
-  <p>Abone olun, gerisini biz halledelim</p>
-  <a href="#" class="btn">Hemen Başla</a>
 </div>
 
 <a class="whatsapp" href="#">
